@@ -1,15 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_project/Admin/Admin_bottom_navigation.dart';
+import 'package:mini_project/Mech/Mech_home_tabbar.dart';
+import 'package:mini_project/Mech/Mech_signup.dart';
 
-class AdminLoginPage extends StatefulWidget {
-  const AdminLoginPage({super.key});
+class MechLogin extends StatefulWidget {
+  const MechLogin({super.key});
 
   @override
-  State<AdminLoginPage> createState() => _AdminLoginPageState();
+  State<MechLogin> createState() => _MechLoginState();
 }
 
-class _AdminLoginPageState extends State<AdminLoginPage> {
+class _MechLoginState extends State<MechLogin> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -19,16 +20,6 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
     _usernameController.dispose();
     _passwordController.dispose();
     super.dispose();
-  }
-
-  void _handleLogin() {
-    if (_formKey.currentState!.validate()) {
-      // Proceed to next page
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => AdminBottomNavigation()),
-      );
-    }
   }
 
   @override
@@ -143,9 +134,28 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                   },
                 ),
               ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 40),
+                    child: Text(
+                      "Forgot password?",
+                      style: TextStyle(fontSize: 15),
+                    ),
+                  ),
+                ],
+              ),
+
               SizedBox(height: 70),
               InkWell(
-                onTap: _handleLogin,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MechHomeTabbar()),
+                  );
+                },
                 child: Container(
                   height: 60,
                   width: 200,
@@ -165,7 +175,25 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Do you have account?", style: TextStyle(fontSize: 15)),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MechSignup()),
+                      );
+                    },
+                    child: Text(
+                      "Sign up",
+                      style: TextStyle(color: Colors.blue, fontSize: 16),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
