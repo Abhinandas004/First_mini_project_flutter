@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Admin/Admin_home_user.dart';
+import 'package:mini_project/Admin/Admin_home_user1.dart';
 import 'package:mini_project/Admin/Admin_login_page.dart';
-import 'package:mini_project/Study_lt_animation.dart';
+import 'package:mini_project/Admin/Admin_mechanic.dart';
+import 'package:mini_project/Admin/Admin_payment.dart';
+import 'package:mini_project/Study_Widgets/Study_appbar_tapbar.dart';
+
 
 void main() {
   runApp(const MyApp());

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mini_project/Admin/Admin_bottom_navigation.dart';
+import 'package:mini_project/Admin/Admin_home_user.dart';
 
 class AdminLoginPage extends StatefulWidget {
   const AdminLoginPage({super.key});
@@ -55,7 +57,7 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
           ),
           SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.only(left: 30,right: 30),
+            padding: const EdgeInsets.only(left: 30, right: 30),
             child: TextFormField(
               decoration: InputDecoration(
                 filled: true,
@@ -67,7 +69,6 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
                 ),
               ),
             ),
-
           ),
           SizedBox(height: 40),
           Row(
@@ -88,35 +89,42 @@ class _AdminLoginPageState extends State<AdminLoginPage> {
           ),
           SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.only(left: 30,right: 30),
+            padding: const EdgeInsets.only(left: 30, right: 30),
             child: TextFormField(
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
-                hintText: "Username",
+                hintText: "Password",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide.none,
                 ),
               ),
             ),
-
           ),
           SizedBox(height: 60),
-          Container(
-            height: 70,
-            width: 200,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Color(0xff2357D9),
-            ),
-            child: Center(
-              child: Text(
-                "Login",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                  color: Colors.white,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AdminBottomNavigation()),
+              );
+            },
+            child: Container(
+              height: 70,
+              width: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xff2357D9),
+              ),
+              child: Center(
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
