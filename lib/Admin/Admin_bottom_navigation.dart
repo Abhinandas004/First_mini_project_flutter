@@ -50,11 +50,11 @@ class _AdminBottomNavigationState extends State<AdminBottomNavigation> {
         ],
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.black,
-        iconSize: 30,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        iconSize: 26,
         onTap: _onItemTapped,
-        elevation: 9,
+        elevation: 6,
       ),
     );
   }
