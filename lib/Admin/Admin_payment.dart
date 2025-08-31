@@ -22,296 +22,54 @@ class _AdminPaymentState extends State<AdminPayment> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Name",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "12/11/2023",
-                        style: TextStyle(color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "₹ 2999/-",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Service",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Mechanic Name",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                ],
-              ),
+
+      body: ListView.builder(
+        padding: EdgeInsets.all(10),
+        itemCount: 6,
+        itemBuilder: (context, index) {
+          return Container(
+            margin: EdgeInsets.symmetric(vertical: 8),
+            padding: EdgeInsets.all(12),
+            height: 120,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 5,
+                  offset: Offset(0, 2),
+                ),
+              ],
             ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Name",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "12/11/2023",
-                        style: TextStyle(color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "₹ 2999/-",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Service",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Mechanic name",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                ],
-              ),
+            child: Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Name"),
+                    Text("10/11/2023", style: TextStyle(color: Colors.grey)),
+                  ],
+                ),
+                SizedBox(height: 4),
+                Row(
+                  children: [
+                    Text("₹ 5455/-"),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text("Service"),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text("Mechanic name"),
+                  ],
+                ),
+              ],
             ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Name",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "12/11/2023",
-                        style: TextStyle(color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "₹ 2999/-",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Service",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Mechanic name",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Name",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "12/11/2023",
-                        style: TextStyle(color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "₹ 2999/-",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Service",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Mechanic name",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Name",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        "12/11/2023",
-                        style: TextStyle(color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "₹ 2999/-",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Service",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    "Mechanic name",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+          );
+        },
       ),
     );
   }

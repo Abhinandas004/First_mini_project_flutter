@@ -18,7 +18,7 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
         backgroundColor: Colors.white,
         appBar: AppBar(actions: [IconButton(onPressed: () {
           
-        }, icon: Icon(Icons.notifications_sharp,color: Colors.yellow,))],
+        }, icon: Icon(Icons.notifications_sharp,color: Colors.yellow,size: 30,))],
           backgroundColor: Colors.white,
           elevation: 0,
 

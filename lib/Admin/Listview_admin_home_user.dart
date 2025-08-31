@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mini_project/Admin/Admin_mech_details.dart';
 
-class AdminMechanic extends StatefulWidget {
-  const AdminMechanic({super.key});
+class ListviewBuilderEg extends StatefulWidget {
+  const ListviewBuilderEg({super.key});
 
   @override
-  State<AdminMechanic> createState() => _AdminMechanicState();
+  State<ListviewBuilderEg> createState() => _ListviewBuilderEgState();
 }
 
-class _AdminMechanicState extends State<AdminMechanic> {
+class _ListviewBuilderEgState extends State<ListviewBuilderEg> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +38,7 @@ class _AdminMechanicState extends State<AdminMechanic> {
                   radius: 28,
                   backgroundImage:  AssetImage("Assets/Rectangle 13.png"),
                 ),
-                SizedBox(width: 20),
+                 SizedBox(width: 20),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,13 +51,14 @@ class _AdminMechanicState extends State<AdminMechanic> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 4),
+                       SizedBox(height: 4),
+                      Text("Location ", style:  TextStyle(fontSize: 15)),
                       Text(
                         "Mobile Number ",
                         style:  TextStyle(fontSize: 15),
                       ),
                       Text(
-                        "Service",
+                        "Email@example.com",
                         style:  TextStyle(fontSize: 15),
                       ),
                     ],

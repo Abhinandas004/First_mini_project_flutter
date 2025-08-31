@@ -1,23 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mini_project/Admin/Admin_home_user.dart';
 import 'package:mini_project/Admin/Admin_notification.dart';
-import 'package:mini_project/Admin/Admin_payment.dart';
+import 'package:mini_project/Mech/Mech_home_tabbar.dart';
+import 'package:mini_project/Mech/Mech_services.dart';
 
-class AdminBottomNavigation extends StatefulWidget {
-  const AdminBottomNavigation({super.key});
+class MechNavigation extends StatefulWidget {
+  const MechNavigation({super.key});
 
   @override
-  State<AdminBottomNavigation> createState() => _AdminBottomNavigationState();
+  State<MechNavigation> createState() => _MechNavigationState();
 }
 
-class _AdminBottomNavigationState extends State<AdminBottomNavigation> {
+class _MechNavigationState extends State<MechNavigation> {
   int _selectedIndex = 0;
-  static const List<dynamic> _widgetOptions = [
-    AdminHomeUser(),
-    AdminPayment(),
-    AdminNotification()
 
+  static final List<Widget> _widgetOptions = [
+    MechHomeTabbar(),
+    MechServices(),
+    AdminNotification(),
   ];
 
   void _onItemTapped(int index) {
@@ -31,20 +30,32 @@ class _AdminBottomNavigationState extends State<AdminBottomNavigation> {
     return Scaffold(
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Image.asset(
+              'Assets/plumber 1.png',
+              width: 30,
+              height: 30,
+            ),
+            label: 'Request',
             backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Payment',
+            icon: Image.asset(
+              'Assets/repair-tool 1.png',
+              width: 30,
+              height: 30,
+            ),
+            label: 'Service',
             backgroundColor: Colors.white,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mark_unread_chat_alt),
-            label: 'Notification',
+            icon: Image.asset(
+              'Assets/star (2) 1.png',
+              width: 30,
+              height: 30,
+            ),
+            label: 'Rating',
             backgroundColor: Colors.white,
           ),
         ],
