@@ -47,7 +47,7 @@ class _AdminPaymentState extends State<AdminPayment> {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Name"),
-                    Text("10/11/2023", style: TextStyle(color: Colors.grey)),
+                    Text("10/11/2023"),
                   ],
                 ),
                 SizedBox(height: 4),

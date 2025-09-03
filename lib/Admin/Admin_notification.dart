@@ -32,152 +32,40 @@ class _AdminNotificationState extends State<AdminNotification> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Heading",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    "Lorem ipsum is a placeholder text commonly\nused to demonstrate the visual form of a\n document or a typeface without relying  . . . . .  ",
-                    style: TextStyle(fontSize: 16.4),
-                  ),
-                ],
-              ),
+      body: ListView.builder(
+        padding:  EdgeInsets.all(5),
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return Container(
+                margin:  EdgeInsets.symmetric(vertical: 8),
+                padding:  EdgeInsets.all(12),
+                height: 130,
+                width: 350,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.05),
+                      blurRadius: 5,
+                      offset:  Offset(0, 2),
+                    ),
+                  ],
+                ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text("Heading", style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
+                Text(
+                  "Lorem ipsum is a placeholder text commonly  used to demonstrate the visual form of a document or a typeface without relying",
+                ),
+              ],
             ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Heading",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    "Lorem ipsum is a placeholder text commonly\nused to demonstrate the visual form of a\n document or a typeface without relying  . . . . .  ",
-                    style: TextStyle(fontSize: 16.4),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Heading",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    "Lorem ipsum is a placeholder text commonly\nused to demonstrate the visual form of a\n document or a typeface without relying  . . . . .  ",
-                    style: TextStyle(fontSize: 16.4),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Heading",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    "Lorem ipsum is a placeholder text commonly\nused to demonstrate the visual form of a\n document or a typeface without relying  . . . . .  ",
-                    style: TextStyle(fontSize: 16.4),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              height: 142.2,
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Heading",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    "Lorem ipsum is a placeholder text commonly\nused to demonstrate the visual form of a\n document or a typeface without relying  . . . . .  ",
-                    style: TextStyle(fontSize: 16.4),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
-          ],
-        ),
+          );
+        },
       ),
     );
   }
