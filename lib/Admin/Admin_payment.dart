@@ -34,13 +34,6 @@ class _AdminPaymentState extends State<AdminPayment> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
-                  blurRadius: 5,
-                  offset: Offset(0, 2),
-                ),
-              ],
             ),
             child: Column(
               children: [

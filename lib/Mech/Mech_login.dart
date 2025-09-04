@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Admin/Admin_bottom_navigation.dart';
 import 'package:mini_project/Mech/Mech_home_tabbar.dart';
+import 'package:mini_project/Mech/Mech_navigation.dart';
 import 'package:mini_project/Mech/Mech_signup.dart';
 
 class MechLogin extends StatefulWidget {
@@ -153,7 +154,7 @@ class _MechLoginState extends State<MechLogin> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MechHomeTabbar()),
+                    MaterialPageRoute(builder: (context) => MechNavigation()),
                   );
                 },
                 child: Container(

@@ -15,7 +15,7 @@ class _ListviewBuilderEgState extends State<ListviewBuilderEg> {
       backgroundColor: Color(0xffE8F1FF),
       body: ListView.builder(
         padding: EdgeInsets.all(10),
-        itemCount: 6,
+        itemCount: 20,
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
@@ -31,13 +31,7 @@ class _ListviewBuilderEgState extends State<ListviewBuilderEg> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
-                    blurRadius: 5,
-                    offset: Offset(0, 2),
-                  ),
-                ],
+
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

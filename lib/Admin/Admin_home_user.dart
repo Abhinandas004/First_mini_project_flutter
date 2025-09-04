@@ -26,7 +26,17 @@ class _AdminHomeUserState extends State<AdminHomeUser> {
             ),
           ),
 
-          bottom: TabBar(
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(60),
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 35, vertical: 0),
+          decoration: BoxDecoration(
+            color: Color(0xffE9F1FF),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child:
+
+          TabBar(
             labelColor: Colors.white,
             unselectedLabelColor: Colors.black,
             indicatorSize: TabBarIndicatorSize.tab,
@@ -58,6 +68,8 @@ class _AdminHomeUserState extends State<AdminHomeUser> {
               ),
             ],
           ),
+        ),
+          )
         ),
         body: TabBarView(children: [ListviewBuilderEg(), AdminMechanic()]),
       ),

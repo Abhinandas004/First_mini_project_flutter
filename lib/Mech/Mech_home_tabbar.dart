@@ -16,9 +16,23 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
       length: 2,
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(actions: [IconButton(onPressed: () {
-          
-        }, icon: Icon(Icons.notifications_sharp,color: Colors.yellow,size: 30,))],
+        appBar: AppBar(
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 45,
+                width: 45,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "Assets/74a46d1fafed0d2e3e2916663c83d0b663e0b05c.png",
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
           backgroundColor: Colors.white,
           elevation: 0,
 
@@ -31,14 +45,15 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
           ),
 
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(80),
+            preferredSize: Size.fromHeight(100),
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 35, vertical: 30),
               decoration: BoxDecoration(
                 color: Color(0xffE9F1FF),
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: TabBar(
+                dividerColor: Colors.transparent,
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.black,
                 indicator: BoxDecoration(
@@ -70,12 +85,7 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
             ),
           ),
         ),
-        body: TabBarView(
-          children: [
-            MechRequestsPage(),
-            MechAccepted(),
-          ],
-        ),
+        body: TabBarView(children: [MechRequestsPage(), MechAccepted()]),
       ),
     );
   }

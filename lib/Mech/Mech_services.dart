@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Mech/Mech_navigation.dart';
 
 class MechServices extends StatefulWidget {
   const MechServices({super.key});
@@ -8,7 +9,6 @@ class MechServices extends StatefulWidget {
 }
 
 class _MechServicesState extends State<MechServices> {
-
   final List<String> services = [
     'Tyre puncture service',
     'Oil change',
@@ -24,7 +24,10 @@ class _MechServicesState extends State<MechServices> {
         backgroundColor: const Color(0xffCFE2FF),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MechNavigation()),
+            );
           },
           icon: const Icon(Icons.arrow_back_ios_new),
         ),
@@ -64,7 +67,6 @@ class _MechServicesState extends State<MechServices> {
                       IconButton(
                         icon: const Icon(Icons.delete),
                         onPressed: () {
-
                           setState(() {
                             services.removeAt(index);
                           });
