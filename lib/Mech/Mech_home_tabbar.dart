@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Mech/Mech_accepted.dart';
+import 'package:mini_project/Mech/Mech_notification.dart';
 import 'package:mini_project/Mech/Mech_requests_page.dart';
 
 class MechHomeTabbar extends StatefulWidget {
@@ -19,14 +20,22 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
         appBar: AppBar(
           actions: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 45,
-                width: 45,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "Assets/74a46d1fafed0d2e3e2916663c83d0b663e0b05c.png",
+              padding: EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MechNotification()),
+                  );
+                },
+                child: Container(
+                  height: 45,
+                  width: 45,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "Assets/74a46d1fafed0d2e3e2916663c83d0b663e0b05c.png",
+                      ),
                     ),
                   ),
                 ),

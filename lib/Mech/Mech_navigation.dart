@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_project/Admin/Admin_notification.dart';
 import 'package:mini_project/Mech/Mech_home_tabbar.dart';
 import 'package:mini_project/Mech/Mech_services.dart';
+import 'package:mini_project/Mech/mech_Ratings_page.dart';
 
 class MechNavigation extends StatefulWidget {
   const MechNavigation({super.key});
@@ -16,7 +17,7 @@ class _MechNavigationState extends State<MechNavigation> {
   static final List<Widget> _widgetOptions = [
     MechHomeTabbar(),
     MechServices(),
-    AdminNotification(),
+    MechRatingsPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -61,6 +62,7 @@ class _MechNavigationState extends State<MechNavigation> {
         ],
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
+
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.black,
         iconSize: 26,

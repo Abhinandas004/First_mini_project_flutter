@@ -9,19 +9,11 @@ class MechServices extends StatefulWidget {
 }
 
 class _MechServicesState extends State<MechServices> {
-  final List<String> services = [
-    'Tyre puncture service',
-    'Oil change',
-    'Battery replacement',
-    'Brake inspection',
-    'Engine diagnostics',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xffCFE2FF),
+        backgroundColor: Color(0xffCFE2FF),
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -29,56 +21,49 @@ class _MechServicesState extends State<MechServices> {
               MaterialPageRoute(builder: (context) => MechNavigation()),
             );
           },
-          icon: const Icon(Icons.arrow_back_ios_new),
+          icon: Icon(Icons.arrow_back_ios_new),
         ),
-        title: const Center(
+        title: Center(
           child: Padding(
             padding: EdgeInsets.only(right: 70),
             child: Text("Service"),
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20),
-        child: ListView.builder(
-          itemCount: services.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10, top: 40),
+            child: Center(
               child: Container(
-                height: 100,
-                width: double.infinity,
+                height: 250,
+                width: 372,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xffCFE2FF),
+                  color: Color(0xffCFE2FF),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        services[index],
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
+                child: ListView.builder(
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Tyre puncture service"),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.delete),
+                          ),
+                        ],
                       ),
-                      IconButton(
-                        icon: const Icon(Icons.delete),
-                        onPressed: () {
-                          setState(() {
-                            services.removeAt(index);
-                          });
-                        },
-                      ),
-                    ],
-                  ),
+                    );
+                  },
                 ),
               ),
-            );
-          },
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
