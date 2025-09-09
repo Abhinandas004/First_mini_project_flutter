@@ -10,6 +10,7 @@ import 'package:mini_project/Admin/Listview_admin_home_user.dart';
 import 'package:mini_project/Mech/Mech_home_tabbar.dart';
 import 'package:mini_project/Mech/Mech_login.dart';
 import 'package:mini_project/Mech/Mech_navigation.dart';
+import 'package:mini_project/Splash_screen_vehicle_repair.dart';
 import 'package:mini_project/Study_Widgets/Listview_builder_example.dart';
 import 'package:mini_project/Study_Widgets/Study_appbar_tapbar.dart';
 import 'package:mini_project/Study_Widgets/Study_stack.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MechLogin(),
+      home: SplashScreenVehicleRepair(),
     );
   }
 }

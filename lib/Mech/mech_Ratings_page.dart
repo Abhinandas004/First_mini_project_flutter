@@ -12,10 +12,6 @@ class _MechRatingsPageState extends State<MechRatingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add, size: 30),
-      ),
       appBar: AppBar(
         backgroundColor: Color(0xffCFE2FF),
         leading: IconButton(

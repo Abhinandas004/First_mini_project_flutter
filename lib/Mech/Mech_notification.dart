@@ -32,7 +32,7 @@ class _MechNotificationState extends State<MechNotification> {
       ),
       body: Expanded(
         child: ListView.builder(
-          itemCount: 2,
+          itemCount: 1,
           itemBuilder: (context, index) {
             return Center(
               child: Padding(
