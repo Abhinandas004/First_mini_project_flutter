@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/Admin/Admin_login_page.dart';
+import 'package:mini_project/Mech/Mech_login.dart';
 import 'package:mini_project/Splash_screen_vehicle_repair.dart';
+import 'package:mini_project/User/User_login.dart';
 
 class CommonLogin extends StatefulWidget {
   const CommonLogin({super.key});
@@ -61,50 +64,74 @@ class _CommonLoginState extends State<CommonLogin> {
                 ],
               ),
               SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: 310,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xff2357D9),
-                ),
-                child: Center(
-                  child: Text(
-                    "Mechanic",
-                    style: TextStyle(
-                      fontSize: 19,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MechLogin()),
+                  );
+                },
+                child: Container(
+                  height: 60,
+                  width: 310,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xff2357D9),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Mechanic",
+                      style: TextStyle(
+                        fontSize: 19,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
               ),
               SizedBox(height: 40),
-              Container(
-                height: 60,
-                width: 310,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                ),
-                child: Center(
-                  child: Text(
-                    "User",
-                    style: TextStyle(
-                      fontSize: 19,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserLogin()),
+                  );
+                },
+                child: Container(
+                  height: 60,
+                  width: 310,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "User",
+                      style: TextStyle(
+                        fontSize: 19,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
               ),
               SizedBox(height: 25),
-              Text(
-                "Admin Login",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff2357D9),
-                  fontSize: 22,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AdminLoginPage()),
+                  );
+                },
+                child: Text(
+                  "Admin Login",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff2357D9),
+                    fontSize: 22,
+                  ),
                 ),
               ),
               SizedBox(height: 230),
