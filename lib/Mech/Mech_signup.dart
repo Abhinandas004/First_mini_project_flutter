@@ -28,13 +28,13 @@ class _MechSignupState extends State<MechSignup> {
           children: [
             Center(
               child: Container(
-                height: 110,
-                width: 140,
+                height: 100,
+                width: 100,
                 margin: EdgeInsets.only(bottom: 0),
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("Assets/App_logo.png"),
-                    fit: BoxFit.contain,
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -45,7 +45,7 @@ class _MechSignupState extends State<MechSignup> {
                 "SIGN UP",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 25,
+                  fontSize: 22,
                   color: Colors.black,
                 ),
               ),
@@ -88,7 +88,7 @@ class _MechSignupState extends State<MechSignup> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 13),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -126,7 +126,7 @@ class _MechSignupState extends State<MechSignup> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 13),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -164,7 +164,7 @@ class _MechSignupState extends State<MechSignup> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 13),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -202,7 +202,7 @@ class _MechSignupState extends State<MechSignup> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 13),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -240,7 +240,7 @@ class _MechSignupState extends State<MechSignup> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 13),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -255,7 +255,7 @@ class _MechSignupState extends State<MechSignup> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 1),
               ],
             ),
             Center(
@@ -285,10 +285,10 @@ class _MechSignupState extends State<MechSignup> {
                   Navigator.pop(context);
                 },
                 child: Container(
-                  height: 60,
+                  height: 55,
                   width: 200,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                     color: Color(0xff2357D9),
                   ),
                   child: Center(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project/Mech/Mech_accepted.dart';
+import 'package:mini_project/Mech/Mech_edit_profile.dart';
 import 'package:mini_project/Mech/Mech_notification.dart';
 import 'package:mini_project/Mech/Mech_requests_page.dart';
 
@@ -47,9 +48,13 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
 
           leading: Padding(
             padding: const EdgeInsets.only(left: 16),
-            child: CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage("Assets/Ellipse 9.png"),
+            child: InkWell(onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MechEditProfile(),));
+            },
+              child: CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage("Assets/Ellipse 9.png"),
+              ),
             ),
           ),
 
