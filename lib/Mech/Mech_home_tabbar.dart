@@ -48,16 +48,19 @@ class _MechHomeTabbarState extends State<MechHomeTabbar> {
 
           leading: Padding(
             padding: const EdgeInsets.only(left: 16),
-            child: InkWell(onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MechEditProfile(),));
-            },
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MechEditProfile()),
+                );
+              },
               child: CircleAvatar(
                 radius: 20,
                 backgroundImage: AssetImage("Assets/Ellipse 9.png"),
               ),
             ),
           ),
-
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(100),
             child: Container(

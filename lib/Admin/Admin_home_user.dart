@@ -18,7 +18,8 @@ class _AdminHomeUserState extends State<AdminHomeUser> {
       length: 2,
       child: Scaffold(
         backgroundColor: Color(0xFFEAF2FF),
-        appBar: AppBar(backgroundColor: Color(0xFFEAF2FF),
+        appBar: AppBar(
+          backgroundColor: Color(0xFFEAF2FF),
           leading: Padding(
             padding: const EdgeInsets.only(left: 08),
             child: CircleAvatar(
@@ -27,49 +28,47 @@ class _AdminHomeUserState extends State<AdminHomeUser> {
           ),
 
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(60),
-        child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 35, vertical: 0),
-          decoration: BoxDecoration(
-            color: Color(0xffE9F1FF),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child:
-
-          TabBar(
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.black,
-            indicatorSize: TabBarIndicatorSize.tab,
-            indicator: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.indigoAccent,
+            preferredSize: Size.fromHeight(70),
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+              decoration: BoxDecoration(
+                color: Color(0xffE9F1FF),
+                borderRadius: BorderRadius.circular(7),
+              ),
+              child: TabBar(
+                dividerColor: Colors.transparent,
+                labelColor: Colors.white,
+                unselectedLabelColor: Colors.black,
+                indicator: BoxDecoration(
+                  color: Color(0xff6EA3F3),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                indicatorSize: TabBarIndicatorSize.tab,
+                tabs: [
+                  Tab(
+                    child: Text(
+                      'User',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      'Mechanic',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            tabs: [
-              Tab(
-                child: Text(
-                  'User',
-                  style: TextStyle(
-                    fontSize: 16,
-
-                    fontWeight: FontWeight.w500,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'Mechanic',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    height: 0,
-                  ),
-                ),
-              ),
-            ],
           ),
-        ),
-          )
         ),
         body: TabBarView(children: [ListviewBuilderEg(), AdminMechanic()]),
       ),

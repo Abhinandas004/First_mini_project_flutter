@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/User/User_notification.dart';
+import 'package:mini_project/User/User_profile.dart';
 
 class UserTabbar extends StatefulWidget {
   const UserTabbar({super.key});
@@ -18,9 +20,17 @@ class _UserTabbarState extends State<UserTabbar> {
         toolbarHeight: 80,
         title: Row(
           children: [
-            CircleAvatar(
-              radius: 22,
-              backgroundImage: AssetImage("Assets/Ellipse 1.png"),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserProfile()),
+                );
+              },
+              child: CircleAvatar(
+                radius: 22,
+                backgroundImage: AssetImage("Assets/Ellipse 1.png"),
+              ),
             ),
             SizedBox(width: 12),
             Expanded(
@@ -43,13 +53,21 @@ class _UserTabbarState extends State<UserTabbar> {
             SizedBox(width: 12),
             Padding(
               padding: const EdgeInsets.all(2.0),
-              child: Container(
-                height: 30,
-                width: 30,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "Assets/74a46d1fafed0d2e3e2916663c83d0b663e0b05c.png",
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserNotification()),
+                  );
+                },
+                child: Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "Assets/74a46d1fafed0d2e3e2916663c83d0b663e0b05c.png",
+                      ),
                     ),
                   ),
                 ),
@@ -58,7 +76,6 @@ class _UserTabbarState extends State<UserTabbar> {
           ],
         ),
       ),
-
     );
   }
 }
