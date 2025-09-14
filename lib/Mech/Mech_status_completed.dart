@@ -90,7 +90,8 @@ class _MechStatusCompletedState extends State<MechStatusCompleted> {
             children: [
               Row(
                 children: [
-                  Radio<int>(
+                  Radio<int>(activeColor: Colors.blue,
+                    fillColor: MaterialStateProperty.all(Colors.blue),
                     value: 1,
                     groupValue: selectedValue,
                     onChanged: (value) {
@@ -109,6 +110,8 @@ class _MechStatusCompletedState extends State<MechStatusCompleted> {
               Row(
                 children: [
                   Radio<int>(
+                    fillColor: MaterialStateProperty.all(Colors.blue),
+                    activeColor: Colors.blue,
                     value: 2,
                     groupValue: selectedValue,
                     onChanged: (value) {
