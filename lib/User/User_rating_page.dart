@@ -1,31 +1,30 @@
 import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:mini_project/User/User_rating_page.dart';
 
-class UserMechFailedPage extends StatefulWidget {
-  const UserMechFailedPage({super.key});
+class UserRatingPage extends StatefulWidget {
+  const UserRatingPage({super.key});
 
   @override
-  State<UserMechFailedPage> createState() => _UserMechFailedPageState();
+  State<UserRatingPage> createState() => _UserRatingPageState();
 }
 
-class _UserMechFailedPageState extends State<UserMechFailedPage> {
+class _UserRatingPageState extends State<UserRatingPage> {
   double rating = 3.0;
+  double rating1 = 0.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffCFE2FF),
         leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () => Navigator.pop(context),
           icon: Icon(Icons.arrow_back_ios_new),
         ),
         title: Center(
           child: Padding(
             padding: EdgeInsets.only(right: 70),
-            child: Text("Failed project"),
+            child: Text("Your rating"),
           ),
         ),
       ),
@@ -84,56 +83,41 @@ class _UserMechFailedPageState extends State<UserMechFailedPage> {
                   print("Rating: $value");
                 },
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => UserRatingPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 30,
-                    width: 30,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          "Assets/0ede8c95d8e04574375bfdd89b1fc7208e229b9f.png",
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
-          SizedBox(height: 70),
+          SizedBox(height: 50),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
                 Text(
-                  "Failed reason",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  "Add rating",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-          ),SizedBox(height: 20,),
-          Padding(
-            padding: const EdgeInsets.only(left: 10,right: 10),
-            child: TextFormField(
-              maxLines: 5,
-              decoration: InputDecoration(hintText: 'Failed reason',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: Colors.black),
-
-                ),
-              ),
-            ),
           ),
-          SizedBox(height: 70,),
+          SizedBox(height: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RatingBar(
+                filledIcon: Icons.star,
+                emptyIcon: Icons.star_border,
+                halfFilledIcon: Icons.star_half,
+                isHalfAllowed: true,
+                filledColor: Colors.amber,
+                size: 60,
+                initialRating: rating1,
+                maxRating: 5,
+                onRatingChanged: (value) {
+                  setState(() => rating1 = value);
+                  print("Rating: $value");
+                },
+              ),
+            ],
+          ),
+          SizedBox(height: 160,),
           Container(
             height: 50,
             width: 250,
@@ -143,7 +127,7 @@ class _UserMechFailedPageState extends State<UserMechFailedPage> {
             ),
             child: Center(
               child: Text(
-                "Ok",
+                "Submit",
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,

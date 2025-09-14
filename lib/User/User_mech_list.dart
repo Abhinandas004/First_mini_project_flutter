@@ -23,7 +23,7 @@ class _UserMechListState extends State<UserMechList> {
               );
             },
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               height: 140,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),

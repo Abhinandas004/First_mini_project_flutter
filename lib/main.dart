@@ -16,10 +16,13 @@ import 'package:mini_project/Study_Widgets/Study_Url_%20launcher.dart';
 import 'package:mini_project/Study_Widgets/Study_appbar_tapbar.dart';
 import 'package:mini_project/Study_Widgets/Study_rating_bar.dart';
 import 'package:mini_project/Study_Widgets/Study_stack.dart';
+import 'package:mini_project/Study_Widgets/Study_tabbar_bottom.dart';
 import 'package:mini_project/User/User_buttom_bar.dart';
 import 'package:mini_project/User/User_mech_details.dart';
+import 'package:mini_project/User/User_mech_failed_page.dart';
 import 'package:mini_project/User/User_mech_list.dart';
 import 'package:mini_project/User/User_request_list.dart';
+import 'package:mini_project/User/User_tabbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +55,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: UserRequestList(),
+      home: UserMechFailedPage(),
     );
   }
 }

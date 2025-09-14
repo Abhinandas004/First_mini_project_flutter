@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project/User/User_tabbar.dart';
 
 class UserPaymentPage extends StatefulWidget {
   const UserPaymentPage({super.key});
@@ -37,7 +38,12 @@ class _UserPaymentPageState extends State<UserPaymentPage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => UserTabbar()),
+                );
+              },
               child: Container(
                 height: 50,
                 width: 260,

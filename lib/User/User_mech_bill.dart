@@ -1,6 +1,7 @@
 import 'package:custom_rating_bar/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mini_project/User/User_payment_page.dart';
+import 'package:mini_project/User/User_rating_page.dart';
 
 class UserMechBill extends StatefulWidget {
   const UserMechBill({super.key});
@@ -82,6 +83,28 @@ class _UserMechBillState extends State<UserMechBill> {
                   setState(() => rating = value);
                   print("Rating: $value");
                 },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserRatingPage()),
+                    );
+                  },
+                  child: Container(
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          "Assets/0ede8c95d8e04574375bfdd89b1fc7208e229b9f.png",
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
